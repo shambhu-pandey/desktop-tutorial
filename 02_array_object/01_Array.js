@@ -1,4 +1,4 @@
-const myarr = [0, 1, 2, 3, 4, 5]
+const myarr = [0, 1, 2, 3, 4, 5, "shambhu"]
 const myHeors = ["shaktiman", "naagraj"]
 
 // we can declare array by this method also 

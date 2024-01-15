@@ -36,7 +36,7 @@ console.log(regularUser.fullname.userfullname);
 console.log(regularUser.fullname.userfullname.firstname);
 
 
-//************  if want to concat more than two obj than you can use spread method (...) */
+/************  if want to concat more than two obj than you can use spread method (...) */
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}

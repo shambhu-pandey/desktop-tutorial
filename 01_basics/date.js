@@ -56,3 +56,13 @@ console.log(newdate.toLocaleString('default' ,{
 }))
 
 console.log(newdate.toLocaleString('default' ,{weekday : "short", month:"long"}))
+
+
+
+let my_new_date = new Date("01-15-2024");
+
+console.log(my_new_date);
+console.log(my_new_date.toLocaleString('default' ,{weekday : "long",}));
+
+
+console.log(my_new_date.toLocaleString('default' ,{weekday : "long", month : "long",date:"long"}));

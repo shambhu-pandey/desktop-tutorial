@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let age = parseInt(prompt("enter age"));
+    let gender = prompt("enter gender");
+    let ticket = 200;
+    let discount;
+    if(age>65 && gender=='male'){
+      discount = 200-30/100*200;
+      alert(  `you have to pay ${discount}` );
+    }
+    else if(age>65 && gender=='female'){  
+      discount = 200-50/100*200;
+      alert(  `you have to pay ${discount}` );
+    }
+    else if (gender==='female'){
+      discount = 200-50/100*200;
+      alert(  `you have to pay ${discount}` );
+    }
+    else if (gender==='kids' && age<=5){
+      alert("No Need To Ticket")
+    }
+    else if (gender==="kids" && age>8){
+      discount = 200-50/100*200;
+      alert(  `you have to pay ${discount}` );
+    }
+  </script>
+</body>
+</html>

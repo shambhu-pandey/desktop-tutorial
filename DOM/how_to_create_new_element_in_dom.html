@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> DOM pandey ji </title>
+</head>
+<body style = "background-color: rgb(88, 83, 83)" ;>
+    
+    <div class = "parent">
+    <div class="day"> Monday</div>
+    <div class="day"> tuesday</div>
+    <div class="day"> wednesday</div>
+    <div class="day"> thursday</div>
+
+  </div>
+
+  <script>
+    //  class ko target kar liye 
+    const parent = document.querySelector('.parent');
+    // class ko print kar diye 
+    console.log(parent);
+    // class ke help se chuldren nikaal sakta hai 
+    console.log(parent.children);
+    // 1 children nikaal liye 
+    console.log(parent.children[1]);
+    // first children ka value bhi nikaal liye 
+    console.log(parent.children[1].innerHTML);
+
+    // pure class ka children ko print krana hai toh loop lga kar kra sakte hai 
+    for(let i =0; i <=3 ; i++){
+      console.log(parent.children[i]);
+      console.log(parent.children[i].innerHTML)
+    }
+
+    // hm class ke children ko styling bhi de sakte hai single single select kar ke 
+    parent.children[1].style.backgroundColor = "red";
+
+    // agar pura par styling karna ho toh wo bhi ho sakta hai 
+    for(let i =0; i <=3 ; i++){
+      parent.children[i].style.color = " yellow";
+    }
+
+
+    // hm first children ya last children dusre method se bhi nikaal sakte hai .
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+// hm children ke class  se bhi parent nikaal sakte hai 
+
+const dayone = document.querySelector('.day');
+console.log(dayone);
+// children se parent nikaal liye 
+console.log(dayone.parentElement);
+// cjhildren ka sibling bhi nikaal sakte hai 
+console.log(dayone.nextElementSibling.innerHTML);
+
+
+// ************************** IMPORTANT  Nodes ******************************************* 
+console.log("nodes : " , parent.childNodes);
+
+
+
+
+// *****************how to create element*************************** 
+
+const div = document.createElement('div');
+console.log(div);
+// class de diye div ko
+div.className="main";
+// id de diye div ko 
+div.id=Math.round(Math.random()* 10 + 1);
+//setAttribute()   attribute set kar rhe hai 
+div.setAttribute("title" , "generated title");
+div.style.backgroundColor = "yellow";
+div.style.padding = "10px";
+
+// ab hme kuch div ke andar content dena padega 
+
+// div.innerHTML = " chai aur code "
+
+// ab hme kuch div ke andar content dena padega 
+
+const addText = document.createTextNode("chai aur code ");
+div.appendChild(addText);
+
+// is Same as 
+// document.body.appendChild(div);
+
+  </script>
+</body>
+</html>

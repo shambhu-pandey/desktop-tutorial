@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="calculator.css";
+    <title> Pandey ji ka Calculator </title>
+    <style>
+      
+
+
+    </style>
+  </head>
+  <body>
+    
+    <div class ="main">
+      
+     <input type="text" id="result" readonly>
+      
+    
+<div  class="button-container">
+
+      <button class="button" onclick="finalResult=' ' ;
+       document.querySelector('#result') .value=finalResult;">C </button>
+
+      <button class="button" onclick="finalResult=finalResult+1;
+      document.querySelector('#result').value=finalResult;">1 </button>
+
+      <button class="button"  onclick="finalResult=finalResult+2;
+      document.querySelector('#result').value=finalResult;">2 </button>
+      <button class="button" onclick=" finalResult=finalResult+ '+'; 
+      document.querySelector('#result').value=finalResult;">+ </button>
+      <button class="button" onclick="finalResult=finalResult+3;
+      document.querySelector('#result').value=finalResult;">3 </button>
+
+      <button class="button" onclick="finalResult=finalResult+4;
+      document.querySelector('#result').value=finalResult;">4 </button>
+
+      <button class="button" onclick="finalResult=finalResult+'-' ;
+      document.querySelector('#result').value=finalResult;">- </button>
+
+      <button class="button" onclick="finalResult=finalResult+5;
+      document.querySelector('#result').value=finalResult;">5 </button>
+
+      <button class="button" onclick="finalResult=finalResult+6;
+      document.querySelctor('#result').value=finalresult;">6 </button>
+
+      <button class="button" onclick="finalResult=finalResult+'*';
+      document.querySelector('#result').value=finalResult;">*</button>
+
+      <button class="button" onclick="finalResult=finalResult+7;
+      document.querySelector('#result').value=finalResult;">7 </button>
+
+      <button class="button" onclick="finalResult=finalResult+8;
+      document.querySelector('#result').value=finalResult;">8 </button>
+
+      <button class="button" onclick="finalResult=finalResult+'/';
+      document.querySelector('#result').value=finalResult;">/ </button>
+
+      <button class="button" onclick=" let totalValue=eval(finalResult);
+      finalResult=totalValue;
+      document.querySelector('#result').value=finalResult;">= </button>
+
+      <button class="button"
+      onclick="finalResult=finalResult+9;
+      document.querySelector('#result').value=finalResult;">9 </button>
+      
+      <button class="button" onclick="finalResult=finalResult+0;
+      document.querySelector('#result').value=finalResult;" >0</button>
+
+      <button class="button" onclick="finalResult=finalResult+'.';
+      document.querySelector('#result').value=finalResult;">.  </button>
+
+
+    </div>
+    </div>
+<script>
+  let finalResult=" ";
+  document.querySelector('#result').value=finalResult;
+</script>
+  </body>
+</html>

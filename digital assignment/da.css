@@ -1,0 +1,34 @@
+.container {
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 50px;
+  }
+  h2 {
+  margin-bottom: 24px;
+  }
+  .flex {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 16px;
+  }
+  .buttons {
+  text-align: center;
+  margin-block: 24px;
+  }
+  .message {
+  display: none;
+  color: red;
+  }
+  .required {
+  color: red;
+  font-weight: 700;
+  }
+  .display {
+  display: block;
+  }
+  .alert {
+  border: 2px solid red;
+  }
+  

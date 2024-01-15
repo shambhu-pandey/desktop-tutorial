@@ -1,0 +1,16 @@
+#add-to-bag{
+  background-color:lightgreen;
+  border-radius: 6px;
+  border:none;
+
+}
+#wishlist{
+  text-transform: uppercase;
+  border-radius:5px;
+
+}
+#add-sale-item{
+  background-color:lightgreen;
+  border-radius: 6px;
+  border:none;
+}

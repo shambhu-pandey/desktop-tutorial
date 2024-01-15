@@ -1,0 +1,346 @@
+<!--1. Write a script to take three numbers from the user and display the
+greatest number out of three
+-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = parseInt(prompt("enter 1st number"));
+    let b = parseInt(prompt("enter 2nd number"));
+    let c = parseInt(prompt("enter 3rd number"));
+
+    if(a>b && a>c){
+      alert(` ${a} is greatest number`);
+    }
+    else if(b>a && b>c){
+      alert(` ${b} is greatest number`);
+    }
+    else {
+      alert(` ${c} is greatest number`);
+    }
+
+  </script>
+</body>
+</html> -->
+
+
+
+<!-- 2. Create two functions that calculate the properties of a circle. Create a
+function called calcCircumfrence to Pass the radius to the function and
+Calculate the circumference based on the radius and output "The
+circumference is NN". Create a function called calcArea to Pass the radius
+to the function. Calculate the area based on the radius, and output "The
+area is NN" -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    let radius=parseInt(prompt("enter Radius :"));
+
+    function  calcCircumfrence( radius){
+      let c= 2 * 3.14 * radius;
+
+      alert ("circumfernce of circle is :" + c);
+    }
+
+    calcCircumfrence( radius);
+
+   function calcArea(radius){
+    let area=3.14 * radius * radius;
+    alert("Area of circle is :" + area);
+   }
+
+   calcArea(radius);
+
+  </script>
+</body>
+</html>
+ -->
+
+
+
+ 
+ <!-- 3. Complete the following function called Count which takes an array of
+integers and the size of the array, and returns the number of items in the
+array that is greater than 13 and less than 29. -->
+
+
+<!-- 4. Develop and demonstrate JavaScript with POP-UP boxes and functions
+for the following problems:
+a) Input: Click on the Display Date button using the onclick( ) function
+Output: Display the date in the alert box -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  button{
+    border-radius:5px;
+    
+  }
+</style>
+<body>
+  
+ 
+     <button onclick="alert(new Date())">Display Date </button>
+  
+
+</body>
+</html>
+
+
+
+<!-- b) Input: A number n obtained using prompt
+Output: Factorial of n number using alert -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    
+    let n=parseInt(prompt("enter number:"));
+   
+    
+    let fact=1;
+    for( let i=1;i<=n;i++){
+    fact=fact*i;
+    }
+    alert( 'factorial is ' +fact);
+
+  </script>
+  
+</body>
+</html>
+
+<!-- c) Input: A number n obtained using prompt
+Output: A multiplication table of numbers from 1 to 10 of n using alert -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    
+    let n=parseInt(prompt("enter number:"));
+     let tab;
+     let temp;
+    for(let i=1;i<=10;i++){
+      temp = n +" * " + i + " = "+ n*i +"\n";
+      tab = tab + temp;
+    }
+    alert(tab);
+
+  </script>
+  
+</body>
+</html>
+
+
+<!-- d) Input: A number n obtained using prompt and add another number
+using confirm
+Output: Sum of the entire n numbers using alert 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    let total=0;
+    let another=true;
+    while(another==true){
+     let a=parseInt(prompt("enter number"));
+     total=total+a;
+     another=confirm("if you want to enter another then you press ok otherwise cancel:");
+    }
+
+    alert( 'total sum is ' + total);
+
+  </script>
+  
+</body>
+</html>
+
+
+
+<!-- 5. Write a JavaScript program where the program takes a random integer
+between 1 to 10. Next, the user is asked to input a guess number. If the
+user input matches with the guess number, the program will display the
+message "Good Work", otherwise display a message "Not matched" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    let random=Math.floor(Math.random()*10+1);
+    alert(`${random}`);
+    let guess=parseInt(prompt("enter guess number"));
+
+ if(random==guess){
+  alert("Good Work");
+}
+else{
+  alert("Not matched");
+}
+
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- 6. Write a function called vowelCount which accepts a string as a parameter,
+and returns the number of vowels in the string. Vowels include a, e, i, o,
+and u. You may assume the string will be all lowercase. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str=prompt("enter string :");
+    
+    let count=0;
+    function  vowelCount(str){
+     
+      for(let i=0;i<str.length ;i++)
+      {
+
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ) {
+          count++;
+        }
+      
+      }
+      alert('total no of vowel is : '+ count);
+    }
+
+    vowelCount(str);
+  </script>
+</body>
+</html>
+
+
+<!-- Write a function daysInMonth that takes a month (between 1 and 12) as a parameter
+and returns the number of days in that month in a non-leap year. For example, a call
+to daysInMonth(6) should return 30, because June has 30 days -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+   let month=prompt("enter month (1-12) in small letter ");
+
+   function daysInMonth(month){
+     
+    if(month== 1 || month== 3 || month== 5 || month== 7 || month== 8 || month==10 || month== 12){
+
+      return 31;
+    }
+    
+    else if( month==2){
+      return 28;
+    }
+    else{
+      return 30;
+    }
+   }
+   
+   let days =daysInMonth(month);
+   alert(days);
+
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!-- 8. Write a JavaScript program to sort the items of an array.
+Sample array: var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+Sample Output: -4,-3,1,2,3,5,6,7,8 -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+   var arr1 =[ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+
+     document.write('Before sorted '+ arr1);
+     document.write("<br>");
+
+   let sorted = arr1.sort((x,y)=>x-y);
+    
+    document.write("After sorted " +sorted);
+
+  </script>
+
+</body>
+</html> -->

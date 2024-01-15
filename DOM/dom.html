@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul> 
+    </div>
+</body>
+</html>
+
+
+
+<!---  
+  //////////////////// koi bhi element ko target karne ke liye :-
+  document.getElementById('');
+
+  **************document.getElementById('title');
+<h1 id=​"title" class=​"heading">​"DOM learning on Chai aur code "<span style=​"display:​ none;​">​test text​</span>​</h1>​ *************
+
+  /////////////////ab hm iske help se koi bhi element ko access kar sakta hu .
+  
+  document.getElementById('').id    => karenge toh id bta dega .
+
+  ***********document.getElementById('title').id
+'title' ****************
+
+
+  document.getElementById('').className   => karenge toh class bta dega .
+
+ *****************document.getElementById('title').className
+'heading'***********
+
+  /////////////////////Attribute bhi de dega .
+
+  document.getElementById(' ').getAttribute('id')  => id ka value de dega  ex: title
+
+  document.getElementById(' ').getAttribute('class')  => class ka value de dega  ex: heading
+
+  **************document.getElementById('title').getAttribute('id');
+'title'
+document.getElementById('title').getAttribute('class');
+'heading'**************
+  
+
+
+//////////////////// Hm attribute bhi set kar denge .
+// aise karnege toh overlap kar jaayega pichla wala class par hi 
+document.getElementById('title').setAttribute('class' , 'test '  );
+
+*****************document.getElementById('title').setAttribute('class' , 'test heading ');
+undefined
+
+// overlap se bachne ke liye hme pichle wala bhi class ka naam dene padega taab set hoga nya wala class name aur pichla wala bhi rhege .
+
+
+//////////////// hm  ab jo element target kiye the usko store bhi kra sakte hai  aur uspar css apply kar sakte hai .
+
+const title = document.getElementById('title');
+undefined
+
+title  ( title likhar click karne par aa jaayega sab )
+<h1 id=​"title" class=​"test heading ">​"DOM learning on Chai aur code "<span style=​"display:​ none;​">​test text​</span>​</h1>​
+
+title.style.backgroundColor="green";
+'green'
+
+title.style.padding = "15px";
+'15px'
+
+title.style.borderRadius="20px"
+'20px'
+
+
+/////////////// Ab hm Content kaise nikaalenge 
+
+
+title.textContent;
+'DOM learning on Chai aur code'
+
+title.innerHTML;
+'DOM learning on Chai aur code
+
+title.innerText;
+'DOM learning on Chai aur code'
+
+// hm ye tono se content nikaal sakte hai but jo span ke andar hoga content ya css ke property se display nhi kra rhe hai usko innerText display nhi karayega . but textContent display kra dega uske andar ka bhi content   . aur innerHTml se sab mil jaayega css ka property bhi likhe honge toh bhi . see example.
+
+title.textContent;
+'DOM learning on Chai aur code test text'
+
+title.innerHTML
+'DOM learning on Chai aur code <span style="display: none;">test text</span>'
+
+title.innerText
+'DOM learning on Chai aur code'
+
+
+
+
+//////////////// hm isko querySelector ke help se bhi target kar sakte hai .
+
+document.querySelector('h2');
+<h2>​Lorem ipsum dolor sit.​</h2>​
+
+document.querySelectorAll('h2');
+NodeList(3) [h2, h2, h2]0: h21: h22: h2length: 3[[Prototype]]: NodeList
+
+
+document.querySelector('#title');
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('.heading');
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector('input[type ="password"]');
+<input type=​"password" name id>​
+
+
+
+// unordered list ko target kar ke hm <li class="list-item">one</li> **** one ko background color set color karenge aur innerHTML text bhi change karenge .
+
+document.querySelector('ul');
+<ul>​…​</ul>​
+
+// document.querySelector('li');   is se kewal ek hi select ho list item 
+
+ document.querySelector('li');
+<li class=​"list-item">​…​</li>​::marker​"one"</li>​
+ document.querySelector('li');
+<li class=​"list-item">​…​</li>​
+
+const turnGreen = document.querySelector('li');
+undefined
+
+turnGreen.style.backgroundColor="green";
+'green'
+
+turnGreen.innerHTML;
+'one'
+
+turnGreen.innerHTML = "five";
+'five'
+
+turnGreen.style.borderRadius = "20px";
+'20px'
+
+
+
+// hm list item ko bhi target kar sakte hai 
+
+ocument.querySelectorAll('ul');
+NodeList [ul]
+
+d
+const turngreen = document.querySelector('li');
+undefined
+
+const turngreen = document.querySelectorAll('li');
+undefined
+
+turngreen.style.backgroundColor = "green";
+VM3175:1 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+    at <anonymous>:1:33
+(anonymous) @ VM3175:1
+
+///////****** aise nhi set hoga kyuki array nhi hai Nodelist hai isliye hme forEach lga kar set karna padega ******
+
+
+turngreen.style.backgroundColor="green";
+VM3201:1 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+    at <anonymous>:1:32
+(anonymous) @ VM3201:1
+turngreen
+NodeList(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+
+turngreen.forEach( function(l) {
+    l.style.backgroundColor = "green"
+});
+undefined
+
+turngreen.forEach( function(l) {
+    l.style.borderRadius = "20px"
+});
+undefined
+
+turngreen.forEach( function(l) {
+    l.style.color = "red"
+});
+undefined
+
+
+
+
+//////// hm isko dusra method se bhi target kar sakte hai 
+
+
+
+document.getElementsByClassName('list-item');
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+const tempclass = document.getElementsByClassName('list-item');
+undefined
+
+// hm isko array me convert kar diye isliye kyuki 
+HTMLcollection me hai .
+// HTMLcollection me rhega toh hm map , forEach nhi lga sakte .
+// array me convert kar diye hai ( Array.from(tempclass);
+Array.from(tempclass);
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+let item = Array.from(tempclass);
+undefined
+
+item.forEach( function (l) {
+    l.style.backgroundColor = "red";
+});
+undefined
+
+item.forEach( function (l) {
+    l.style.color = "pink"
+});
+undefined
+
+item.forEach( function (l) {
+    l.style.color = "blue"
+});
+
+
+-->
+

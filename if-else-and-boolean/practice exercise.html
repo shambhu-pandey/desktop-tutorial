@@ -1,0 +1,47 @@
+<!--
+
+  1. give discount based on age ,gender for metro ticket 
+  . females get 50 % off
+   . kids under 5 years of age are free .
+   . kids up to 8 years have half ticket .
+   . people over 65 years of age anly pay 30% of the ticket .
+   . in case of multiple discounts max dixcount will apply .
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice question</title>
+</head>
+<body>
+   
+  <script>
+
+    let age=1;
+    let gender='male';
+    let finalDiscount;
+    if(age<=5){
+        finalDiscount=100;
+    }
+    else if( gender==='female'){
+      finalDiscount =50;
+    }
+    else if(age<=8){
+      finalDiscount=50;
+    }
+    else if(age>=65){
+      finalDiscount=30;
+    }
+   
+    
+    else{
+      finalDiscount =0;
+    }
+    
+    console.log( ` your  discount is  ${ finalDiscount}`);
+  </script>
+  
+</body>
+</html>

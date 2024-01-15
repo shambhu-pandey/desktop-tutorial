@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    .main{
+      border: 2px solid black;
+      height: 600px;
+      width: 400px;
+    }
+
+    .result{
+     
+      border:2px solid black;
+      border-radius:5px;
+      height:50px;
+      width:300px;
+       margin-left:45px;
+     
+    
+    }
+
+    .button-container{
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .button{
+      height:50px;
+      width:70px;
+      margin:20px;
+      margin-top:10px;
+    
+
+    }
+   
+  </style>
+</head>
+<body>
+  <p> calculator</p>
+
+  <div class ="main">
+      <h2 style="text-align: center;">Calculator</h2>
+     <input type="text"  class ="result" readonly>
+<div class="button-container"> 
+
+    <button class="button" onclick="finalResult=' ';
+    document.querySelector('.result').value=finalResult;"> C</button>
+
+    <button class="button" onclick="finalResult=finalResult+1;
+    document.querySelector('.result').
+     value=finalResult;"> 1</button>
+
+    <button class="button" onclick="finalResult=finalResult+2;
+    document.querySelector('.result').value=finalResult;"> 2</button>
+    <button class="button" onclick="finalResult=finalResult+ '+';
+    document.querySelector('.result').value=finalResult;"> +</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+3;
+    document.querySelector('.result').value=finalResult;"> 3</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+4;
+    document.querySelector('.result').value=finalResult;"> 4</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+'-';
+    document.querySelector('.result').value=finalResult;"> -</button>
+    
+    <button class="button"
+    onclick="finalResult=finalResult+5;
+    document.querySelector('.result').value=finalResult;"> 5</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+6;
+    document.querySelector('.result').value=finalResult;"> 6</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+'*';
+    document.querySelector('.result').value=finalResult;"> *</button>
+
+    <button class="button"
+    onclick="finalResult=finalResult+7;
+    document.querySelector('.result').value=finalResult;"> 7</button>
+
+    <button class="button" onclick="finalResult=finalResult+8;
+    document.querySelector('.result').value=finalResult;"> 8</button>
+
+    <button class="button" 
+    onclick="finalResult=finalResult+'/';
+    document.querySelector('.result').value=finalResult;"> /</button>
+    <button class="button"
+    onclick="
+    let totalvalue=eval(finalResult);
+    finalResult=totalvalue;
+    document.querySelector('.result').value=finalResult;"> =</button>
+    <button class="button"
+    onclick="finalResult=finalResult+9;
+    document.querySelector('.result').value=finalResult;"> 9</button>
+    <button class="button"
+    onclick="finalResult=finalResult+0;
+    document.querySelector('.result').value=finalResult;"> 0</button>
+
+    <button class="button"onclick="finalResult=finalResult+'.';
+    document.querySelector('.result').value=finalResult;"> .</button>
+  </div>
+  </div>
+
+  <script>
+    let finalResult=" ";
+    document.querySelector('.result').value=finalResult;
+  </script>
+</body>
+</html>

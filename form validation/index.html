@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form design</title>
+  <style>
+    /* .formdesign{ */
+       /* text-align: left; */
+       /* display: grid;
+        grid-template-columns:  1fr 1fr 1fr;
+        gap: 16px;
+       margin-bottom: 16px;
+       width: 60%; 
+    */
+.container{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+      
+  </style>
+</head>
+<body>
+   <h1 style = "text-align : center">Test javascript form validation </h1>
+   <form action = "/myaction.php" name ="myform" onsubmit ="return validateForm()" method ="post">
+    <div class="container">
+  <div class="formdesign" id = "fname">
+    name: <input type = "text"  name="fname"  ><b><span class="formerror"> </span></b>
+  </div>
+    
+  <div class="formdesign" id = "address">
+   address : <input type = "text"  name="address" ><b><span class="formerror"></span></b>
+  </div>
+
+  <div class="formdesign" id = "email">
+    email: <input type = "email"  name="email" ><b><span class="formerror"></span></b>
+  </div>
+
+  <div class="formdesign" id = "phone">
+    phone : <input type = "phone"  name="phone" ><b><span class="formerror"></span></b>
+  </div>
+
+  <div class="formdesign" id = "zipcode">
+    zipcode : <input type = "zipcode"  name="zipcode" ><b><span class="formerror"></span></b>
+  </div>
+    <div class="formdesign">
+  <label  class="select" for ="desh">choose country :</label>
+  <select  name = "country" id = "desh"> 
+    <option value = "india">india</option>
+    <option value = "nepal">nepal</option>
+    <option value = "england">england</option>
+    <option value = "newzealand">newzeland</option>
+  </select>
+</div>
+
+  <div class="formdesign" id="gender">
+    gender : 
+    <div>
+    <input type = "radio" name ="gender" value ="male" > male
+    <input type = "radio" name ="gender" value ="female"> female
+  </div>
+  </div>
+
+  <div class ="formdesign" id = "password">
+    password : <input type ="password" name="password">
+  </div>
+
+  <div class ="formdesign" id = "password">
+    confirm password : <input type ="password" name="cpassword">
+  </div>
+
+  <input class ="but" type ="submit" value ="Submit">
+
+</div>
+</form>
+
+  
+<script>
+  // Your JavaScript code
+  function seterror(id, error) {
+    var element = document.getElementById(id);
+    element.(".formerror").innerHTML = error;
+}
+
+function validateForm() {
+    var returnval = true;
+    var names = document.forms['myform']["fname"].value;
+    if (names.length < 5) {
+        seterror("fname", "*length of name cannot be short");
+        returnval = false;
+    }
+    return returnval;
+}
+
+
+ 
+  </script>
+  </body>
+</html>

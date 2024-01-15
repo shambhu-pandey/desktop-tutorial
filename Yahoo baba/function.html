@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // without parameter without function 
+    // function demo(){
+    //   document.write("hello  everyone <br>");
+    //   document.write(" good morning :");
+    // }
+    // demo();
+
+
+    //  *****************with parameter************* 
+
+    function demo ( a, b){
+      alert(a+b);
+      if(a>b){
+        alert(`${a} is greater than ${b}`);
+      }
+      else{
+        alert(`${b} is greater than ${a}`);
+      }
+    }
+     
+    let a=parseInt(prompt('enter 1st value'));
+    let b=parseInt(prompt('enter 2nd value'));
+    demo(a ,b);
+
+  </script>
+</body>
+</html>

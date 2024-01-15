@@ -1,0 +1,25 @@
+.calculator{
+  height: 60vh;
+  width: 20vw;
+  border: 1px solid rgb(157, 153, 153);
+  margin: 2vw;
+}
+.textarea{
+  height: 5vh;
+  width: 90%;
+  margin: 3%;
+   border-radius: 2px solid rgb(157, 153, 153);;
+}
+.btm{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+  padding: 5px;
+  text-align: center;
+}
+.button{
+ 
+  margin:2px;
+  height: 70px;
+  width: 100px;
+}

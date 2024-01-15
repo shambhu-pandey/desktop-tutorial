@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let array=["samsung" , "nokia" , "lava" , "apple" ,"oppo" ,"motorola"];
+    document.write(array);
+    document.write("<br>")
+    document.write(array.pop());
+    document.write("<br>")
+    document.write(array);
+    document.write(array.splice(2,0,"motorola"));
+    document.write("<br>")
+    document.write(array);
+    document.write(array.unshift("panasonic" ,"micromax"));
+    document.write("<br>")
+    document.write(array);
+    for(let i =array.length; i>=0;i--){
+      document.write("<br>")
+       document.write(array[i]);
+    }
+    document.write(array.join(" "));
+    document.write(array);
+  </script>
+</body>
+</html>

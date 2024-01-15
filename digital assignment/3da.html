@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let arr = [ 1,2,3,45,66,77,23,12,33,66,90,76,15,26,];
+let n= arr.length;
+alert(n);
+let count=0;
+function Count(arr , n){
+let i;
+for(i=0;i<n;i++){
+if(arr[i]>13 && arr[i]<29){
+count++;
+}
+}
+alert('number of items in thearray that is greater than 13 and less than 29 is ' +
+count);
+}
+Count(arr, n);
+</script>
+</body>
+</html>

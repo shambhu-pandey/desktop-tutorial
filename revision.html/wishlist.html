@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myntra bag </title>
+  <style>
+
+    #add-to-bag{
+      color:aqua;
+      background-color: brown;
+    }
+
+    #wishlist{
+      color:aqua;
+      background-color: blueviolet;
+    }
+    #add-2-item{
+      color:aqua;
+      background-color:bisque;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1 class="heading">Your bag has 0 item</h1>
+  
+  <button id = "add-to-bag" onclick="item=item+1;
+  document.querySelector('.heading').innerText=`Your bag has ${item} item`;"> add to bag </button>
+   <button id="wishlist" onclick="item=item-1;
+   document.querySelector('.heading').innerText=`Your bag has ${item} item`; "> MOVE TO WISHLIST</button>
+   <button id="add-2-item" onclick="item=item+2;document.querySelector('.heading').innerText=`Your bag has 2 quantity add ${item} item`;">Add 1+1 sale item</button>
+
+   <script>
+   let item=0;
+   document.querySelector('.heading').innerText=`Your bag has ${item} item`;
+   </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 1. save your name in a variable inside script tag 
+  2 . display name from the variable on the page -->
+     <h1 id="name" ></h1>
+  <script>
+    let name="shmabhu";
+     document.querySelector('#name').innerText=name;
+  </script>
+  
+</body>
+</html>

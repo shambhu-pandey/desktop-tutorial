@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box1" onclick="red()">hello</div>
+  <div id="box2" onclick="black()">hello</div>
+  <div id="box3">hello</div>
+  <div id="box4">hello</div>
+  <button onclick="reset()">reset</button>
+
+  <script>
+    boxx1=document.getElementById("box1");
+    function red(){
+      boxx1.style.backgroundColor="red";
+    }
+
+    boxx2=document.getElementById("box2");
+    function black(){
+      boxx2.style.backgroundColor="black";
+    }
+
+    function reset(){
+      boxx1.style.backgroundColor="white";
+      boxx2.style.backgroundColor="white";
+    }
+
+    
+  </script>
+</body>
+</html>

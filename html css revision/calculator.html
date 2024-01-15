@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calculator.css">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+   <div class = "calculator" >
+
+     <input type="text" class="textarea">
+      
+     <div class = "btm">
+    <button class="button" onclick="result= ' ' ;
+     document.querySelector('.textarea').value=result ;">C</button>
+    <button class="button" onclick="result = result+'1'; document.querySelector('.textarea').value=result">1</button>
+
+    <button class="button" onclick="result=result+'2'; document.querySelector('.textarea').value=result">2</button>
+
+    <button class="button" onclick="result=result+'+'; document.querySelector('.textarea').value=result">+</button>
+    <button class="button" onclick="result=result+'3'; document.querySelector('.textarea').value=result">3</button>
+    <button class="button" onclick="result=result+'4'; document.querySelector('.textarea').value=result">4</button>
+    <button class="button" onclick="result=result+'-'; document.querySelector('.textarea').value=result">-</button>
+    <button class="button" onclick="result=result+'5'; document.querySelector('.textarea').value=result">5</button>
+    <button class="button" onclick="result=result+'6'; document.querySelector('.textarea').value=result">6</button>
+    <button class="button"  onclick="result=result+'*'; document.querySelector('.textarea').value=result">*</button>
+    <button class="button" onclick="result=result+'7'; document.querySelector('.textarea').value=result">7</button>
+    <button class="button" onclick="result=result+'8'; document.querySelector('.textarea').value=result">8</button>
+    <button class="button" onclick="result=result+'/'; document.querySelector('.textarea').value=result">/</button>
+    <button class="button" onclick="let total = eval(result); document.querySelector('.textarea').value=total">=</button>
+    <button class="button" onclick="result=result+'9'; document.querySelector('.textarea').value=result">9</button>
+    <button class="button" onclick="result=result+'0'; document.querySelector('.textarea').value=result">0</button>
+    <button class="button" onclick="result=result+'.'; document.querySelector('.textarea').value=result">.</button>
+  </div>
+   </div>
+
+  <script>
+    let result ="";
+    document.querySelector(".textarea").innerhtml=result;
+  </script>
+</body>
+</html>

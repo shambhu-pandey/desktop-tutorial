@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .button{
+      height: 30px;
+      width: 80px;
+      border: 1px solid red; /* Fix the typo here */
+      color: yellow;
+      font-size: 15px;
+      background-color: rgb(0, 255, 21);
+    }
+  </style>
+  
+</head>
+<body>
+  <button class="button" onclick="wishlist()">click me </button>
+  <script>
+    let add=0;
+    function wishlist(){
+      
+      add++;
+       document.querySelector('.button').innerHTML=add;
+     
+       if(add==10){
+         console.log('your cart is full');
+         return 10;
+       }
+    }
+  </script>
+</body>
+</html>

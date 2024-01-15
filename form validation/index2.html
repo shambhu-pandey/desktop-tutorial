@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      padding: 10px 50px;
+
+    }
+    .formdesign{
+      font-size: 20px;
+    }
+    .formdesign input{
+      width:50%;
+      padding : 12px 20px;
+      border : 1px solid blue;
+      margin : 14 px;
+      border-radius:  4px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <form action = "" name ="myform" onsubmit="return validateform()" method="post">
+    <h1>form</h1>
+    <div class ="formdesign" id ="name">
+    name:<input type ="text" name ="fname" required><b><span class="formerror"></span></b><br><br>
+  </div>
+
+  <div class ="formdesign" id ="email">
+    email:<input type ="email" name ="femail" required><b><span class="formerror"></span></b><br><br>
+  </div>
+  <div class="formdesign" id="phone">
+    phone :<input type="phone" name="fphone"><b><span class="formerror"></span></b><br><br>
+  </div>
+  <div class ="formdesign" id ="address">
+    address:<input type ="text" name ="faddress" required><b><span class="formerror"></span></b><br><br>
+  </div>
+
+  <div class ="formdesign" id ="pass">
+    password:<input type ="password" name ="fpass" required><b><span class="formerror"></span></b><br><br>
+  </div>
+
+  <div class ="formdesign" id ="cpass">
+   confirm password:<input type ="password" name ="cpass" required><b><span class="formerror"></span></b><br><br>
+  </div>
+
+  <input type="submit" value = submit class="but">
+
+  </form>
+
+  <script>
+
+    function seterror(id , error){
+      var element=document.getElementById(id);
+      element.getElementsByClassName("formerror")[0].innerHTML=error;
+    }
+    function validateform(){
+      var returnval = true;
+      const exp = /[0-9]+/;
+
+      var name = document.forms["myform"]["fname"].value;
+
+      if(name.length<5){
+        // seterror("name" , "**length of name is  too short ")
+
+        alert("**length of name is  too short ")
+        returnval = false;
+      }
+    else if(exp.test(name)){
+        seterror("name" , "**name cannot have numbers ")
+        returnval = false;
+      }
+
+      var email = document.forms['myform']["femail"].value;
+      if(email.length>20){
+        seterror("email" , "**Email length is too long")
+        returnval = false;
+      }
+
+      var phone_no = document.forms["myform"]["fphone"].value;
+     if(phone_no.length!=10){
+      seterror("phone" ,"*Phone number should be of 10 digits! ")
+     }
+
+     var password=document.forms['myform']["fpass"].value;
+     if(password.length !=6){
+      seterror("pass", "*Password should be atleast 6 characters long!");
+        returnval = false;
+     }
+    
+     var confirm_pass=document.forms["myform"]["cpass"].value;
+     if(confirm_pass != password){
+      seterror("cpass", "*Password and Confirm password should match!");
+        returnval = false;
+     }
+
+
+     
+
+      return returnval;
+    }
+  </script>
+</body>
+</html>

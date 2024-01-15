@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .cricket{
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+   
+  <div class="cricket">
+  <h1> Bat Ball Stump Game</h1> 
+   
+  <!--BAT BUTTON-->
+  <button onclick="
+   console.log('you have chosen bat');
+    userchoice = 'bat';
+    randomgenerate();
+   resultdeclared(); ">Bat</button>
+
+ <!--BALL BUTTON-->
+
+ <button onclick="
+   console.log('you have chosen ball');
+    userchoice = 'ball';
+   randomgenerate();
+   resultdeclared();
+">Ball</button>
+
+<!--STUMP BUTTON-->
+
+  <button onclick="
+   console.log('you have chosen stump');
+    userchoice='stump';
+   randomgenerate();
+   resultdeclared();
+">Stump</button>
+
+</div>
+
+  
+  <script>
+  
+  let randomnumber;
+  let computerchoice;
+  let userchoice;
+  let result;
+
+   let score={
+    Won : 0,
+    Lost : 0,
+    Tie : 0,
+   };
+
+  function randomgenerate(){
+     randomnumber = Math.random() * 3;
+    computerchoice;
+
+   if (randomnumber > 0 && randomnumber <= 1) {
+      computerchoice = 'bat';
+      console.log('computer choice is bat');
+   } else if (randomnumber > 1 && randomnumber <= 2) {
+      computerchoice = 'ball';
+      console.log('computer choice is ball');
+   } 
+   else {
+      computerchoice = 'stump';
+      console.log('computer choice is stump');
+   }
+  }
+
+  function  resultdeclared(){
+    if(computerchoice===userchoice){
+   result='match tie'
+   score.tie++;
+ }
+  else if(computerchoice==='ball' && userchoice ==='bat'){
+   result='user won'
+   score.Won++;
+ }
+ else if(computerchoice==='bat' && userchoice ==='ball'()){
+  result = 'computer won';
+  score.Lost++;
+ }
+ else if (computerchoice==='stump'&& userchoice==='bat'){
+  result = 'computer won'
+  score.Lost++;
+ }
+ else if(computerchoice==='stump'&& userchoice==='ball'){
+  result ='user won';
+  score.Won++;
+ }
+ else{
+   result='computer won';
+   score.Lost++;
+ }
+  alert(`userChoice is ${userchoice} ,computerChoice is ${computerchoice} , and then Result is ${result}  
+  Won ${score.Won} \n
+  Lost ${score.Lost} \n
+  Tie${score.Tie}.`);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>local storage </title>
+</head>
+<body>
+  <script>
+
+// if yoy want to store data in local storage then you can use localStore.setItem and then you can store data 
+
+// in this example name is key and shambhu is  value 
+    localStorage.setItem('name','shambhu');
+    localStorage.setItem('price','1200');
+
+//if you want to see own storage data then you can see from localStorage.getItem .
+    console.log(localStorage.getItem('name'));    // shambhu
+ 
+
+
+    let product={
+  company: 'nike',
+  name: 'jeans',
+  size: 'm',
+};
+
+// if you want to store object then first you convert in string and then you can store data in localStorage 
+localStorage.setItem('product' , JSON.stringify(product));
+
+
+// if you want to see previous object  storage in data then first you convert in javascript object and then you can see on console .
+
+let product2=JSON .parse(localStorage.getItem('product'));
+console.log(product2);
+
+
+// if you want to delete particular key  value then you can use  localStorage.removeItem();
+
+localStorage.removeItem('price');
+
+// if you want to dalete all data value storage in localStorage then you can use localStorage.clear();
+
+  </script>
+</body>
+</html>

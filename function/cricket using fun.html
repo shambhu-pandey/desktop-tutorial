@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title> cricket game </title>
+    <style>
+      .cricket{
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cricket"> 
+     <h1>Bat Ball Stump Game </h1>
+
+    
+     <button  onclick=" 
+
+        let computerChoice =compChoice();
+        let result = generateResult('Bat' , computerChoice);
+        finalResult('Bat',computerChoice,result)"    >Bat</button>
+
+
+
+     <button onclick=" 
+     computerChoice = compChoice();
+     result = generateResult('Ball' , computerChoice);
+     finalResult('Ball',computerChoice,result);"
+       >Ball</button>
+
+
+     <button  onclick="
+         
+         computerChoice = compChoice();
+         result = generateResult('Stump' , computerChoice);
+         finalResult('Stump',computerChoice,result);">Stump</button>
+    </div> 
+
+
+    <script>
+    
+       function   compChoice(){
+      let randomNumber=Math.floor(Math.random()*3);
+      
+      
+       if(randomNumber>0 && randomNumber<=1){
+       return  'Bat' ;
+       } 
+       else if(randomNumber>1 && randomNumber<=2){
+      return'Ball' ;
+       }
+       
+       else{
+       return  'Stump' ;
+      }
+  }
+
+     function  generateResult( usermove , computerChoice){
+        
+        if(computerChoice===usermove){
+          return 'match tie';
+        }
+        else if (computerChoice==='Bat' && usermove=='Ball'){
+          return 'computer won';
+        }
+        else if (computerChoice==='Bat' && usermove==='Stump'){
+          return 'user won';
+        }
+        else if (computerChoice==='Ball' && usermove==='Bat'){
+          return 'user won';
+        }
+        else if (computerChoice==='Ball' && usermove==='Stump'){
+          return 'user won';
+        }
+        else if (computerChoice==='Stump' && usermove==='Bat'){
+          return 'computer won';
+        }
+        else if (computerChoice==='Stump' && usermove==='Ball'){
+          return 'user won';
+        }
+
+     }
+
+     function finalResult(usermove,computerChoice,result){
+      alert(` your choice is ${usermove} and computer choice is ${computerChoice} winner is ${result}`);
+     }
+    </script>
+  </body>
+</html>

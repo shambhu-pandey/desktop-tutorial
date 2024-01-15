@@ -1,0 +1,94 @@
+<!---
+  if alternates :  
+
+  1. ternary operator  :  condition ? true value : false value;
+
+  2. guard operator : value || defaultValue 
+     use when a fallback value is needed
+  
+  3. default operator: value ?? fallbackValue
+  use when you want to consider only null and undefined as falsyu.
+
+
+  // we use all these operator to:
+  simplifies   : conditional logic
+  use: wisely to maintain readability
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if alternates </title>
+</head>
+<body>
+  
+  <script>
+  
+  // if else method 
+    /* let age=18;
+
+    if(age>=18){
+     console.log("you can drive:");
+    }
+    else{
+      console.log("you can not drive:");
+    }      */
+
+     //  *******************----------Ternary operator : 
+
+   /*  let age=34;
+  let  result= age>=18 ? " you can drive": " you can not drive:"; 
+
+  console.log(result);  */
+
+
+  // **************** Guard operator: ***************
+
+  // let  age=90;
+  // let finalage=age || 18;
+  // console.log(age);      // 90
+  // console.log(finalage);   // 18
+
+  // let  age=0;
+  // let finalage=age || 18;
+  // console.log(age);   // 0
+  // console.log(finalage);   // 18
+
+  // let  age;
+  // let finalage=age || 18;
+  // console.log(age);   // undefined 
+  // console.log(finalage);   // 18
+
+
+
+
+  // **********Default  operator **************
+
+  // let age=0;
+  // letfinalAge=age?? 18;
+  
+  // console.log(age);    // 0
+  // console.log(letfinalAge); //  0
+
+
+  //  let age=10;
+  // letfinalAge=age?? 18;
+  
+  // console.log(age);  // 10
+  // console.log(letfinalAge);   //10
+
+
+ let age;
+  letfinalAge=age?? 18;
+  
+  console.log(age);  // undefined
+  console.log(letfinalAge);   //18
+
+
+
+
+  </script>
+</body>
+</html>

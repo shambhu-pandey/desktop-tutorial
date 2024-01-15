@@ -116,7 +116,7 @@ console.log(anyString.substring(0, 6));
 
 console.log(anyString.substring(4));
 console.log(anyString.substring(4, 7));
-console.log(anyString.substring(7, 4));
+console.log(anyString.substring(7, 5));
 
 console.log(anyString.substring(0, 7)); 
 console.log(anyString.substring(0, 10)); 

@@ -111,3 +111,37 @@ console.log(+true);
  console.log(gameCounter);
  ++gameCounter;
  console.log(gameCounter);
+
+
+
+
+// let num = 12;
+// console.log(num);
+// console.log(typeof num);
+
+// let inString = String(num);
+// console.log(typeof inString);
+// console.log(inString);
+
+
+// let num = "12abc";
+// console.log(num);
+// console.log(typeof num);
+
+// let inNumber = Number(num);
+// console.log(typeof inNumber);
+// console.log(inNumber);
+
+
+// let bool = true;
+// console.log(bool);
+// console.log(typeof bool);
+
+// let inbool = Number(bool);
+// console.log(typeof inbool);
+// console.log(inbool);
+
+
+
+
+

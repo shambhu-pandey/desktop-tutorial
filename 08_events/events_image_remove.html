@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            color: white;
+        }
+
+        #google {
+            color: white;
+            font-size: 40px;
+            margin-left: 5vw;
+        }
+    </style>
+</head>
+
+<body style="background-color: #414141;">
+    <h2>Amazing images</h2>
+
+    <ul id="images">
+
+        <li><img width="200px" height="200px" id="nepal"
+                src="https://imgs.search.brave.com/RrGw1FmLZD9Mw8ukj3lhVjah7ObgY3EPqLU4Gz_ybig/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzQ0LzA0LzYw/LzM2MF9GXzI0NDA0/NjAwOF9GSmhGeDJR/NTBCTzlVOWtTMHlJ/cGdQUTV5NmlPZERs/aS5qcGc"
+                alt="nepal">
+        </li>
+
+        <li><img width="200px" height="200px" id="india"
+                src="https://imgs.search.brave.com/o9Nr0w8do4H7UjEbUM578FC4S2f3OPq4E49sKwccYaw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTEy/OTg1MjU2MC9waG90/by9pbmRpYS1mbGFn/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1jZlRYblNRYnlT/VEkwVlRQTmFwZjNB/QjQtRFhhdDIxbTNy/M0ViTkRic2hnPQ"
+                alt="india"></li>
+
+        <li><img width="200px" height="200px" id="usa"
+                src="https://imgs.search.brave.com/s9sWYAXsBIeDVbPMFIyJOMsuFWZ0G5Svx8wi9SsmrMM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MjkzOTM1ODc1OTMt/NTZlYmQ5MTE2MzIx/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4T0h4OGRY/TmhKVEl3Wm14aFoz/eGxibnd3Zkh3d2ZI/eDhNQT09"
+                alt="usa"></li>
+
+        <li><img width="200px" height="200px" id="russia"
+                src="https://imgs.search.brave.com/qtPmD2yL1zqFhOSCKQU-AWSNoVVwqosdPFtdysWzMc4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzAxLzg3Lzc0/LzM2MF9GXzEwMTg3/NzQ2N193cGxVYllj/Qjd4WUJONHVJUkY1/R2l4dDdTZWZrcEFK/Yi5qcGc"
+                alt="russia"></li>
+
+    </ul>
+    <a id="google" href="https://www.google.com/">google</a>
+
+</body>
+<script>
+
+    // click karne ka ye sab different - different  approach 
+
+
+
+    // document.getElementById('india').onclick = function () {
+    //     alert("This  Is The INDIAN Flag");
+    // }
+
+    // document.getElementById('india').addEventListener('click', function () {
+    //     alert("Indian flag");
+    // }, false);
+
+    //attachEvent();
+    // JQuery - on
+
+
+    //type, timestamp , defaultPrevented 
+    // target , toElement , srcElement , currentTarget , 
+    // clientX , clientY , screenX , screenY
+    // altKey , ctrlKey , shiftKey , keyCode
+
+
+    /* ab hm true aur false me different dekhenge console khol le */
+
+    // true likhe hai toh usko capturing kahte hai 
+    // document.getElementById('images').addEventListener('click', function (e) {
+    //     console.log(" clicked inside the ul");
+    // }, true); 
+
+    // isme kya hoge ki pahle "clicked inside the ul" dikhayega phir  "india flag clicked "
+    // document.getElementById('india').addEventListener('click', function (e) {
+    //     console.log("india flag  clicked");
+    // }, true);
+
+
+    // false likhe hai toh usko bubbling kahte hai 
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log(" clicked inside the ul");
+    }, false);
+
+
+    //false likhe hai toh usko bubbling kahte hai 
+    // isme kya hoge ki pahle "india flag clicked" dikhayega phir  "clicked inside the ul"
+
+    // document.getElementById('india').addEventListener('click', function (e) {
+    //     console.log("india flag  clicked");
+    //     // e.stopPropagation se ul par nhi jaayega yhi tak ruk jaayega 
+    //     e.stopPropagation();
+    // }, false);
+
+
+    document.querySelector('#google').addEventListener('click', function (e) {
+        e.preventDefault(),
+            e.stopPropagation()
+        console.log("google clicked");
+    }, false);
+
+
+
+    // hm ab banane ja rhe hai ki koi bhi image par click kare toh oo unage remove ho jaai ul se 
+
+    document.querySelector('#images').addEventListener("click", function (e) {
+        console.log(e.target.tagName);
+
+        if (e.target.tagName === 'IMG') {
+            let removeit = e.target.parentNode
+            console.log(e.target.id);
+            removeit.remove();
+        }
+    });
+
+
+
+
+
+
+</script>
+
+</html>

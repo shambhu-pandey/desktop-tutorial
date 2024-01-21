@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>setTimeOut and clearTimeout</title>
+</head>
+
+<body>
+
+  <h2>chai aur code</h2>
+  <button class="stop">click me </button>
+
+</body>
+<script>
+
+  // setTimeout se hm set kar skte hai kuch time ke baad hmara text kaise change ho jaayega .
+  // is example me hm h2 ko target kiye hai aur ek variable me store kra liye hai aur hm usko pass kar de rhe hai setTimeout me 
+  const changeText = function () {
+    document.querySelector('h2').innerHTML = "shambhu pandey is coder";
+  }
+  // hm changeText ko reference  de diye  setTimeout me aur 2000 time hai milisecond me //
+
+  // setTimeout(changeText, 5000);
+
+
+  // ab hm setTimeout ko ek variable me hold kar lenge kyuki ab hm sikhenge ki usko time se pahle hi agar rokna chahte hai toh rok bhi sakte hai change nhi hone denge 
+
+  let changeMe = setTimeout(changeText, 2000);
+
+  document.querySelector('.stop').addEventListener('click', function () {
+    clearTimeout(changeMe);
+    console.log("stopped");
+  })
+
+
+</script>
+
+</html>

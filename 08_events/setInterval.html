@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="h2">chai aur shambhu</h2>
+    <h1>chai aur code </h1>
+    <button class="start">start</button>
+    <button class="stop">stop</button>
+    <button class="startter">startter</button>
+    <button class="stopper">stopper</button>
+</body>
+<script>
+    const changeme = function (str) {
+        innerHTML = console.log(str, Date.now());
+    }
+
+    let start_stop;
+
+    document.querySelector('.start').addEventListener('click', function () {
+        start_stop = setInterval(changeme, 2000, "pandey");
+    });
+
+
+    document.querySelector('.stop').addEventListener('click', function () {
+        clearInterval(start_stop, 2000);
+    });
+
+
+
+
+    const change = function () {
+        document.querySelector('h1').
+            innerHTML = `click me start or stop button ${Date.now().toString()}`;
+    }
+
+    let button_control;
+
+    document.querySelector('.startter').addEventListener('click', function () {
+        button_control = setInterval(change, 2000);
+    });
+
+
+    document.querySelector('.stopper').addEventListener('click', function () {
+        clearInterval(button_control, 2000);
+    });
+
+
+
+
+
+</script>
+
+</html>

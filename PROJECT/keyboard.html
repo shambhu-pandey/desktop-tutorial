@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .key {
+      color: aliceblue;
+
+    }
+
+    .insert {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+
+    }
+
+    .color {
+      color: aliceblue;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+
+  <div class="insert">
+    <h1 class="key">Press the key and watch magic</h1>
+  </div>
+
+</body>
+<script>
+
+  const insert = document.querySelector('.insert');
+
+  window.addEventListener('keydown', (e) => {
+    insert.innerHTML = `
+  
+  <div class="color">
+    <table border=1>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+    </div>
+  `;
+  });
+
+</script>
+
+</html>

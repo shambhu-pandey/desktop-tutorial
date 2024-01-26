@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  Value State Description
+  0 UNSENT Client has been created. open() not called yet.
+  1 OPENED open() has been called.
+  2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+  3 LOADING Downloading; responseText holds partial data.
+  4 DONE The operation is complete.
+</body>
+
+<script>
+  // XMLHttpRequest => ek method hai jisko use kar ke hm data send aur recieve kar sakte hai  aur methoda hai  yah almost ek class hai toh object banana padta hai 
+
+  // xhr ek request hi hai hm isko variable bhi bol sakte hai 
+
+  const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', requestUrl);  // open() request ko bhejta hai  isko andar 2 method lagta hai (method aur string ) 
+
+  console.log('here');
+  // onreadystatechange se state change hoga .
+  xhr.onreadystatechange = function () {
+    console.log(xhr.readyState);
+    if (xhr.readyState === 4) {
+      //es state me aa gye toh hme ye kuch response deta hai toh hm ese le sakte hai kuch bhi naam dekar 
+      let data = this.responseText;
+      console.log(data);
+      console.log(typeof data); // string me hai 
+      // console.log(data.followers);  // follower nhi batayega because string me hai 
+
+      data = JSON.parse(this.responseText); // object me convert kar liye 
+      console.log(data.followers); // ab followers dega 
+    }
+  }
+
+  // aise open call nhi hoga hai 
+  xhr.send();
+
+</script>
+
+</html>
